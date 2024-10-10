@@ -34,7 +34,7 @@ A: Supporting both 64-bit and 32-bit Windows would be very time consuming, so we
 ### Q: Why don't you include ESU updates?
 A: ESU updates will be rolled out by Microsoft until 2026, and unfortunately adding ESU updates will be time consuming as ti requires us to make new releases every time a batch of ESU updates gets rolled out.
 ### Q: Why VxKex instead of the dotexe1337 Windows 7 Extended Kernel?
-Q: VxKex is safer than dotexe's extended kernel as it relies on external DLLs.
+A: VxKex is safer than dotexe's extended kernel as it relies on external DLLs.
 ### Q: Does this include custom integrated GPU dri-
 A: **NO**
 ## Credits
