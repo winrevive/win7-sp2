@@ -26,6 +26,9 @@ Windows 7 Service Pack 2 is a package consisting of updates, tweaks, backported 
 > [!CAUTION]
 > Failure to follow instructions properly will result in a bricked system! We do not take responsibility for this unless this is a legitimate bug in the installer!
 
+> [!CAUTION]
+> RAID Storage is not supported. Only NVMe is added. Read below in the FAQ for why we did not add RAID.
+
 > [!WARNING]
 > Both versions of the Windows 7 Service Pack 2 are x64 only! Don't file issues over the lack of 32-bit hardware support as we do not plan to support 32-bit hardware. Consult the FAQ for more information.
 
