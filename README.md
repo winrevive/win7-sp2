@@ -11,7 +11,7 @@ Windows 7 Service Pack 2 is a package consisting of updates, tweaks, backported 
 - [ ] - Snipping Tool from Windows 10 version 1507
 - [ ] - Paint from Windows 10 version 1703
 - [ ] - Registry Editor from Windows 10 version 1703
-- [ ] - In-place service pack installer based on Dominic Hayes' 8to7 backend
+- [ ] - In-place service pack installer
 - [ ] - Generic USB 3.0 and NVMe drivers
 - [ ] - UEFI support in the ISO releases (if you download the UEFI-specific version)
 - [ ] - Inclusion of VxKex
