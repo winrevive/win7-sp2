@@ -76,6 +76,7 @@ A: Well to answer your question, how would we add RAID if it's not even supporte
 
 - Alureon
 - h4rl
+- vm3dmp (Average PC)
 
 ### Honorable mentions
 
@@ -84,4 +85,4 @@ A: Well to answer your question, how would we add RAID if it's not even supporte
 - manatails: UEFISeven
 - vxiduu: VxKex and SnippingToolEx
 - Aurorarion: Registry Editor and Paint backports
-- vm3dmp (Average PC): Generic USB 3.0 support & NVMe support (NO RAID)
+- Private Testers
