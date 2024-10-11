@@ -66,6 +66,10 @@ A: VxKex is safer than dotexe's Windows 7 Extended Kernel as it relies on extern
 
 A: **NO**
 
+### Q: Does it come with RAID storag-
+
+A: Well to answer your question, how would we add RAID if it's not even supported by intel/other manufacturers?
+
 ## Credits
 
 ### Developers
@@ -80,3 +84,4 @@ A: **NO**
 - manatails: UEFISeven
 - vxiduu: VxKex and SnippingToolEx
 - Aurorarion: Registry Editor and Paint backports
+- vm3dmp (Average PC): Generic USB 3.0 support & NVMe support (NO RAID)
