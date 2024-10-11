@@ -24,7 +24,7 @@ Windows 7 Service Pack 2 is a package consisting of updates, tweaks, backported 
 > [!WARNING]
 > Both versions of the Windows 7 Service Pack 2 are x64 only! Don't file issues over the lack of 32-bit hardware support as we do not plan to support 32-bit hardware. Consult the FAQ for more information.
 ### ISO installation
-> [!WARNING]
+> [!IMPORTANT]
 > The ISO releases are for clean installs only. For in-place installs, please use the installer once we release a working version of it.
 1. Pick the UEFI or Legacy Boot version, depending on what your system uses
 2. Flash it onto a DVD or a USB flash drive
