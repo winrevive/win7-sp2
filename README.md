@@ -46,9 +46,12 @@ A: VxKex is safer than dotexe's Windows 7 Extended Kernel as it relies on extern
 ### Q: Does this include custom integrated GPU dri-
 A: **NO**
 ## Credits
+### Developers
+- Alureon
+- h4rl
+### Honorable mentions
 - Microsoft Corporation: Windows 7 operating system. *Windows 7 Service Pack 2 is by no means affiliated with Microsoft Corporation.*
 - K4sum1: Inspiration (this project is inspired from the Windows 7 Updated ISO by K4sum1)
-- Dominic Hayes: 8to7 backend, which the installer is based off of
 - manatails: UEFISeven
 - vxiduu: VxKex and SnippingToolEx
 - Aurorarion: Registry Editor and Paint backports
