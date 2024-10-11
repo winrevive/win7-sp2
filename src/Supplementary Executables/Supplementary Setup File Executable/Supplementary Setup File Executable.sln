@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Basic Express 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Supplementary Setup File Executable", "Supplementary Setup File Executable\Supplementary Setup File Executable.vbproj", "{4FDA32A1-5336-47FF-ACF1-92B3BC5C09EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FDA32A1-5336-47FF-ACF1-92B3BC5C09EB}.Debug|x86.ActiveCfg = Release|x86
+		{4FDA32A1-5336-47FF-ACF1-92B3BC5C09EB}.Debug|x86.Build.0 = Release|x86
+		{4FDA32A1-5336-47FF-ACF1-92B3BC5C09EB}.Release|x86.ActiveCfg = Release|x86
+		{4FDA32A1-5336-47FF-ACF1-92B3BC5C09EB}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

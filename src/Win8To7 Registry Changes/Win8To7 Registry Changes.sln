@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Basic Express 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Win8To7 Registry Changes", "Win8To7 Registry Changes\Win8To7 Registry Changes.vbproj", "{BEA9F361-5C9F-4334-874D-5E6B683193E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEA9F361-5C9F-4334-874D-5E6B683193E6}.Debug|x64.ActiveCfg = Debug|x64
+		{BEA9F361-5C9F-4334-874D-5E6B683193E6}.Debug|x64.Build.0 = Debug|x64
+		{BEA9F361-5C9F-4334-874D-5E6B683193E6}.Debug|x86.ActiveCfg = Debug|x86
+		{BEA9F361-5C9F-4334-874D-5E6B683193E6}.Debug|x86.Build.0 = Debug|x86
+		{BEA9F361-5C9F-4334-874D-5E6B683193E6}.Release|x64.ActiveCfg = Release|x64
+		{BEA9F361-5C9F-4334-874D-5E6B683193E6}.Release|x64.Build.0 = Release|x64
+		{BEA9F361-5C9F-4334-874D-5E6B683193E6}.Release|x86.ActiveCfg = Release|x86
+		{BEA9F361-5C9F-4334-874D-5E6B683193E6}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
