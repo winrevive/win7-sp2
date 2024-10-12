@@ -15,7 +15,7 @@ Windows 7 Service Pack 2 is a package consisting of updates, tweaks, backported 
 - [x] - Generic USB 3.0 and NVMe drivers
 - [ ] - UEFI support in the ISO releases (if you download the UEFI-specific version)
 - [x] - Inclusion of VxKex
-- [x] - Windows 8 PE in the ISO, with a theme that resembles Windows 7
+- [ ] - Windows 8 PE in the ISO, with a theme that resembles Windows 7
 - [ ] - Windows 10 setup engine in the ISO release
 - [ ] - Upscaled graphics in some places
 - [ ] - Windows Vista/7 PE's boot screen on the ISO

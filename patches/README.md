@@ -1,3 +1,3 @@
 # patches
 
-> Software, Files and drivers we inject/cold patch into install.WIM with NTlite
+> Software, Files, Registry and Drivers we inject/cold patch into install.WIM with NTlite
