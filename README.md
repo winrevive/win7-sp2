@@ -10,7 +10,7 @@ Windows 7 Service Pack 2 is a package consisting of updates, tweaks, backported 
 - [x] - All updates until 2020, with the addition of Windows Embedded Standard 7 updates
 - [x] - Snipping Tool from Windows 10 version 1507
 - [ ] - Paint from Windows 10 version 1703
-- [ ] - Registry Editor from Windows 10 version 1703
+- [x] - Registry Editor from Windows 10 version 1703
 - [ ] - In-place service pack installer
 - [x] - Generic USB 3.0 and NVMe drivers
 - [ ] - UEFI support in the ISO releases (if you download the UEFI-specific version)
