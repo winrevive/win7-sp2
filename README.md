@@ -13,7 +13,7 @@ Windows 7 Service Pack 2 is a package consisting of updates, tweaks, backported 
 - [x] - Registry Editor from Windows 10 version 1703
 - [ ] - In-place service pack installer
 - [x] - Generic USB 3.0 and NVMe drivers
-- [ ] - UEFI support in the ISO releases (if you download the UEFI-specific version)
+- [x] - UEFI support in the ISO releases (if you download the UEFI-specific version)
 - [x] - Inclusion of VxKex
 - [x] - Windows 8 PE in the ISO, with a theme that resembles Windows 7
 - [x] - Windows 10 setup engine in the ISO release
@@ -85,7 +85,6 @@ A: Well to answer your question, how would we add RAID if it's not even supporte
 
 - Microsoft Corporation: Windows 7 operating system. *Windows 7 Service Pack 2 is by no means affiliated with Microsoft Corporation.*
 - K4sum1: Inspiration (this project is inspired from the Windows 7 Updated ISO by K4sum1)
-- manatails: UEFISeven
 - vxiduu: VxKex and SnippingToolEx
 - Aurorarion: Registry Editor and Paint backports
 - Private Testers
