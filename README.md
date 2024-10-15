@@ -86,6 +86,6 @@ A: Well to answer your question, how would we add RAID if it's not even supporte
 - Microsoft Corporation: Windows 7 operating system. *Windows 7 Service Pack 2 is by no means affiliated with Microsoft Corporation.*
 - K4sum1: Inspiration (this project is inspired from the Windows 7 Updated ISO by K4sum1)
 - vxiduu: VxKex and SnippingToolEx
-- Aurorarion: Registry Editor and Paint backports
+- Aurorarion: Some app backports and themed controls in the ISO's autorun
 - ImSwordQueen: Windows 7 theme used in the installation media's PE
 - Private Testers
