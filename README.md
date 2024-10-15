@@ -87,4 +87,5 @@ A: Well to answer your question, how would we add RAID if it's not even supporte
 - K4sum1: Inspiration (this project is inspired from the Windows 7 Updated ISO by K4sum1)
 - vxiduu: VxKex and SnippingToolEx
 - Aurorarion: Registry Editor and Paint backports
+- ImSwordQueen: Windows 7 theme used in the installation media's PE
 - Private Testers
