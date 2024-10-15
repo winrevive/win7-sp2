@@ -1,0 +1,288 @@
+<migration urlid="http://www.microsoft.com/migration/1.0/migxmlext/frameworkupgrade">
+  <component type="System" context="System">
+    <displayName>UpgradeFramework</displayName>
+    <role role="Settings">
+
+      <rules>
+        <conditions>
+          <condition>MigXmlHelper.IsMigrationScope("FrameworkBasic")</condition>
+        </conditions>
+
+        <excludeAttributes attributes="Security">
+          <objectSet>
+            <pattern type="File">* [*]</pattern>
+            <pattern type="Registry">* [*]</pattern>
+          </objectSet>
+        </excludeAttributes>
+
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\SQMClient [MachineId]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\SQMClient [IsTest]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\SQMClient\$ [StudyId]</pattern>
+          </objectSet>
+        </include>
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\MountedDevices [\DosDevices\*]</pattern>
+          </objectSet>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters\*[*]</pattern>
+          </objectSet>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\FVEAutoUnlock\* [*]</pattern>
+          </objectSet>
+        </include>
+
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\Setup\Source OS (*\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion [*]</pattern>
+          </objectSet>
+        </include>
+        <locationModify script="MigXmlHelper.RelativeMove('HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion','HKLM\SYSTEM\Setup\Source OS (Updated on %MIG_SCENARIO_DATETIME%)')">
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion [*]</pattern>
+          </objectSet>
+        </locationModify>
+      </rules>
+
+      <rules>
+        <conditions>
+          <condition>MigXmlHelper.IsMigrationScope("FrameworkFull")</condition>
+        </conditions>
+
+        <excludeAttributes attributes="Security">
+          <objectSet>
+            <pattern type="File">* [*]</pattern>
+            <pattern type="Registry">* [*]</pattern>
+          </objectSet>
+        </excludeAttributes>
+
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\SQMClient [MachineId]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\SQMClient [IsTest]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\SQMClient\$ [StudyId]</pattern>
+          </objectSet>
+        </include>
+
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\Setup\Upgrade\* [*]</pattern>
+          </objectSet>
+        </include>
+
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\Setup\Source OS (*\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion [*]</pattern>
+          </objectSet>
+        </include>
+        <locationModify script="MigXmlHelper.RelativeMove('HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion','HKLM\SYSTEM\Setup\Source OS (Updated on %MIG_SCENARIO_DATETIME%)')">
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion [*]</pattern>
+          </objectSet>
+        </locationModify>
+
+        <rules>
+          <conditions operation="AND">
+            <condition>MigXmlHelper.IsOSLaterThan("NT","6.2.0.0")</condition>
+          </conditions>
+          <include>
+            <objectSet>
+              <pattern type="Registry">HKU\.DEFAULT\Software\Microsoft\IdentityCRL\StoredIdentities\*[*]</pattern>
+              <pattern type="Registry">HKU\.DEFAULT\Software\Microsoft\IdentityCRL\DPAPICloudKeyVersionMappings\*[*]</pattern>
+            </objectSet>
+          </include>
+        </rules>
+
+        <include>
+          <objectSet>
+            <pattern type="File">%ProgramData%\Microsoft\Windows\SystemData\S-$\ReadOnly\LockScreen\*[*]</pattern>
+            <pattern type="File">%ProgramData%\Microsoft\Windows\SystemData\S-$\ReadOnly\PicturePassword\*[*]</pattern>
+            <pattern type="File">%ProgramData%\Microsoft\Vault\*[*]</pattern>
+            <pattern type="File">%System32%\config\systemprofile\AppData\Local\Microsoft\Vault\*[*]</pattern>
+            <pattern type="File">%System32%\config\systemprofile\AppData\Roaming\Microsoft\Vault\*[*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\PINLogonEnrollment\*[*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\PicturePassword\*[*]</pattern>
+          </objectSet>
+        </include>
+
+        <includeAttributes attributes="Security">
+          <objectSet>
+            <pattern type="File">%ProgramData%\Microsoft\Windows\SystemData\S-$\ReadOnly\LockScreen\*[*]</pattern>
+            <pattern type="File">%ProgramData%\Microsoft\Windows\SystemData\S-$\ReadOnly\PicturePassword\*[*]</pattern>
+            <pattern type="File">%ProgramData%\Microsoft\Vault\*[*]</pattern>
+            <pattern type="File">%System32%\config\systemprofile\AppData\Local\Microsoft\Vault\*[*]</pattern>
+            <pattern type="File">%System32%\config\systemprofile\AppData\Roaming\Microsoft\Vault\*[*]</pattern>
+          </objectSet>
+        </includeAttributes>
+
+        <include>
+          <objectSet>
+            <pattern type="File">%WINDIR%\Security [edb*.log]</pattern>
+            <pattern type="File">%WINDIR%\Security [edb.chk]</pattern>
+            <pattern type="File">%WINDIR%\Security\Database [secedit.sdb]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\MountedDevices [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Lsa\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters [HostName]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters [NV HostName]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters [Domain]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters [NV Domain]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Netlogon [Start]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\FVEAutoUnlock\* [*]</pattern>
+          </objectSet>
+        </include>
+        <exclude>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Lsa [FIPSAlgorithmPolicy]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Lsa [Security Packages]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Lsa\OSConfig\* [*]</pattern>
+          </objectSet>
+        </exclude>
+
+        <include>
+          <objectSet>
+            <pattern type="File">%WINDIR%\debug [sam.log]</pattern>
+            <pattern type="Registry">HKLM\SECURITY\Policy\PolAcDmS []</pattern>
+
+            <pattern type="File">%WINDIR%\system32\Microsoft\Protect\*[*]</pattern>
+            <pattern type="File">%WINDIR%\system32\Microsoft\Protect\*\User[*]</pattern>
+
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\* [*]</pattern>
+
+          </objectSet>
+        </include>
+
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\setup.exe [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Configuration Manager [RegDebugBreaksEnabled]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Cryptography[MachineGuid]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\*[*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Cryptography\Defaults\Provider Types\*[*]</pattern>
+            <pattern type="File">%SYSTEM32%\Microsoft\Crypto\RSA\MachineKeys[*]</pattern>
+            <pattern type="File">%SYSTEM32%\Microsoft\Crypto\DSS\MachineKeys[*]</pattern>
+            <pattern type="File">%ALLUSERSAPPDATA%\Microsoft\Crypto\RSA\*[*]</pattern>
+            <pattern type="File">%ALLUSERSAPPDATA%\Microsoft\Crypto\DSS\*[*]</pattern>
+            <pattern type="File">%ALLUSERSAPPDATA%\Microsoft\Crypto\SystemKeys\*[*]</pattern>
+
+            <pattern type="File">%ALLUSERSAPPDATA%\Microsoft\Crypto\Keys[*]</pattern>
+            <pattern type="File">%SYSTEMROOT%\ServiceProfiles\LocalService\AppData\Roaming\Microsoft\Crypto\Keys[*]</pattern>
+            <pattern type="File">%SYSTEMROOT%\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft\Crypto\Keys[*]</pattern>
+
+            <pattern type="Registry">HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management [VerifierOptions]</pattern>
+            <pattern type="Registry">HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management [VerifyDrivers]</pattern>
+            <pattern type="Registry">HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management [VerifyDriverLevel]</pattern>
+            <pattern type="Registry">HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management [XdvVerifierOptions]</pattern>
+            <pattern type="Registry">HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management [VerifierRandomTargets]</pattern>
+            <pattern type="Registry">HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management [VerifyDriversSuppress]</pattern>
+            <pattern type="Registry">HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management [XdvTipTag]</pattern>
+            <pattern type="Registry">HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management [XdvExtensionOption]</pattern>
+            <pattern type="Registry">HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management [XdvRuleSuppress]</pattern>
+            <pattern type="Registry">HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management [XdvTimedFactor]</pattern>
+            <pattern type="Registry">HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management [XdvTipStopTime]</pattern>
+            <pattern type="Registry">HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management [XdvTipPerformanceControl]</pattern>
+            <pattern type="Registry">HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management [VerifyDriverLevelAnnex]</pattern>
+            <pattern type="Registry">HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management [XdvTipControl]</pattern>
+            <pattern type="Registry">HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management [XdvTipNames]</pattern>
+
+          </objectSet>
+        </include>
+        <exclude>
+          <objectSet>
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\setup.exe [VerifierDlls]</pattern>
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\setup.exe [GlobalFlag]</pattern>
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\setup.exe [VerifierFlags]</pattern>
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\setup.exe [PageHeapFlags]</pattern>
+          </objectSet>
+        </exclude>
+
+        <merge script="MigXmlHelper.SourcePriority()">
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Cryptography[MachineGuid]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\*[*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Cryptography\Defaults\Provider Types\*[*]</pattern>
+            <pattern type="File">%SYSTEM32%\Microsoft\Crypto\RSA\MachineKeys[*]</pattern>
+            <pattern type="File">%SYSTEM32%\Microsoft\Crypto\DSS\MachineKeys[*]</pattern>
+            <pattern type="File">%ALLUSERSAPPDATA%\Microsoft\Crypto\RSA\MachineKeys[*]</pattern>
+            <pattern type="File">%ALLUSERSAPPDATA%\Microsoft\Crypto\DSS\MachineKeys[*]</pattern>
+
+            <pattern type="File">%ALLUSERSAPPDATA%\Microsoft\Crypto\Keys[*]</pattern>
+            <pattern type="File">%SYSTEMROOT%\ServiceProfiles\LocalService\AppData\Roaming\Microsoft\Crypto\Keys[*]</pattern>
+            <pattern type="File">%SYSTEMROOT%\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft\Crypto\Keys[*]</pattern>
+
+          </objectSet>
+        </merge>
+
+        <contentModify script="MigXmlHelper.KeepExisting('Security','FileAttrib:HSRI')">
+          <objectSet>
+            <pattern type="File">%ALLUSERSAPPDATA%\Microsoft\Crypto\RSA\MachineKeys</pattern>
+            <pattern type="File">%ALLUSERSAPPDATA%\Microsoft\Crypto\DSS\MachineKeys</pattern>
+          </objectSet>
+        </contentModify>
+
+        <includeAttributes attributes="Security">
+          <objectSet>
+
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Cryptography[MachineGuid]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\*[*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Cryptography\Defaults\Provider Types\*[*]</pattern>
+            <pattern type="File">%SYSTEM32%\Microsoft\Crypto\RSA\MachineKeys[*]</pattern>
+            <pattern type="File">%SYSTEM32%\Microsoft\Crypto\DSS\MachineKeys[*]</pattern>
+
+            <pattern type="File">%ALLUSERSAPPDATA%\Microsoft\Crypto\Keys[*]</pattern>
+            <pattern type="File">%SYSTEMROOT%\ServiceProfiles\LocalService\AppData\Roaming\Microsoft\Crypto\Keys[*]</pattern>
+            <pattern type="File">%SYSTEMROOT%\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft\Crypto\Keys[*]</pattern>
+
+            <pattern type="File">%WINDIR%\system32\Microsoft\Protect\Recovery[*]</pattern>
+          </objectSet>
+        </includeAttributes>
+
+        <includeAttributes attributes="Security,CopyInheritedDaclEntries">
+          <objectSet>
+            <pattern type="File">%ALLUSERSAPPDATA%\Microsoft\Crypto\RSA\MachineKeys[*]</pattern>
+            <pattern type="File">%ALLUSERSAPPDATA%\Microsoft\Crypto\DSS\MachineKeys[*]</pattern>
+          </objectSet>
+        </includeAttributes>
+
+        <locationModify script="MigXmlHelper.ExactMove('HKLM\System\Setup\SetupCl\PendingRequest [SidAccountDomainNew]')">
+          <objectSet>
+            <pattern type="Registry">HKLM\SECURITY\Policy\PolAcDmS []</pattern>
+          </objectSet>
+        </locationModify>
+
+
+        <destinationCleanup>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Lsa\Audit\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Lsa\Credssp\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Lsa\Data\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Lsa\FipsAlgorithmPolicy\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Lsa\GBG\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Lsa\JD\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Lsa\Skew1\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Lsa\SSO\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Lsa\SspiCache\* [*]</pattern>
+
+            <pattern type="File">%WINDIR%\Security [edb*.log]</pattern>
+            <pattern type="File">%WINDIR%\Security [edb.chk]</pattern>
+            <pattern type="File">%WINDIR%\Security\Database [secedit.sdb]</pattern>
+
+            <pattern type="File">%WINDIR%\debug [sam.log]</pattern>
+
+            <pattern type="File">%WINDIR%\system32\Microsoft\Protect\*[*]</pattern>
+            <pattern type="File">%WINDIR%\system32\Microsoft\Protect\*\User[*]</pattern>
+          </objectSet>
+        </destinationCleanup>
+
+      </rules>
+
+    </role>
+  </component>
+
+</migration>

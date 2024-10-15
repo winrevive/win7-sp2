@@ -1,0 +1,625 @@
+<migration urlid="http://www.microsoft.com/migration/1.0/migxmlext/offlineupgrade">
+  <component type="System" context="System">
+    <displayName>offlineUpgrade</displayName>
+    <paths>
+      <path type="File">%WINDIR%\offlineUpgrade</path>
+    </paths>
+    <role role="Settings">
+      <rules>
+
+        <excludeAttributes attributes="Security">
+          <objectSet>
+            <pattern type="File">* [*]</pattern>
+            <pattern type="Registry">* [*]</pattern>
+          </objectSet>
+        </excludeAttributes>
+
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Lsa [Security Packages]</pattern>
+          </objectSet>
+        </include>
+
+        <include>
+          <objectSet>
+
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\NDIS\IfTypes\* [*]</pattern>
+
+            <pattern type="File">%WINDIR% [WindowsUpdate.log]</pattern>
+            <pattern type="File">%WINDIR%\SoftwareDistribution\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\* [*]</pattern>
+          </objectSet>
+        </include>
+        <exclude>
+          <objectSet>
+            <pattern type="File">%WINDIR%\SoftwareDistribution\DataStore\* [*]</pattern>
+            <pattern type="File">%WINDIR%\SoftwareDistribution\DeliveryOptimization\* [*]</pattern>
+            <pattern type="File">%WINDIR%\SoftwareDistribution\Download\* [*]</pattern>
+            <pattern type="File">%WINDIR%\SoftwareDistribution\ScanFile\* [*]</pattern>
+            <pattern type="File">%WINDIR%\SoftwareDistribution\SelfUpdate\* [*]</pattern>
+            <pattern type="File">%WINDIR%\SoftwareDistribution\WebSetup\* [*]</pattern>
+            <pattern type="File">%WINDIR%\SoftwareDistribution\WuRedir\* [*]</pattern>
+            <pattern type="File">%WINDIR%\SoftwareDistribution\Featured\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdateSysprepInProgress\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Setup\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update [SetupWizardLaunchTime]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update [FirstDetectionFailureTime]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update [BalloonType]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update [BalloonTime]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update [ScheduledInstallDate]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update [ScheduledInstallDay]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update [ScheduledInstallTime]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update [ShowUnableToDetectUI]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update [OfflineDetectionPending]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update [UnableToDetectTime]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update [DownloadExpirationTime]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update [NextDetectionTime]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update [NextFeaturedUpdatesNotificationTime]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update [FeaturedUpdatesNotificationSeqNumGenTime]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update [FeaturedUpdatesNotificationSeqNum]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\Results\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\UAS\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\Volatile\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\UXFirmwareInstallsAllowed\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\AutoFirmwareInstallsAllowedAtShutdown\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Orchestrator [UpdateRebootTime]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Orchestrator [FlightRebootTime]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Orchestrator [OobeCompleteTimeStamp]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Reporting\RebootWatch\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Reporting\RebootNotCompleted\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Reporting\RebootCompletionReported\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Reporting\DontExpirePolledEvents\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Reporting\EventCache.v2\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update [ResetAU]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update [SelfUpdateTime]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate [UpdateId]</pattern>
+          </objectSet>
+        </exclude>
+
+        <merge script="MigXmlHelper.FindFilePlaceByPattern('&lt;F&gt; (&lt;N&gt;).&lt;E&gt;')">
+              <objectSet>
+            <pattern type="File">%WINDIR% [WindowsUpdate.log]</pattern>
+              </objectSet>
+        </merge>
+
+        <merge script="MigXmlHelper.SourcePriority()">
+          <objectSet>
+
+            <pattern type="File">%WINDIR%\SoftwareDistribution\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\* [*]</pattern>
+
+          </objectSet>
+        </merge>
+
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Notifications [*]</pattern>
+
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Notifications\Data [41C61629A3BC0C75]</pattern>
+
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Notifications\Data [418A073AA3BC7C75]</pattern>
+
+          </objectSet>
+        </include>
+
+        <merge script="MigXmlHelper.SourcePriority()">
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Notifications [*]</pattern>
+
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Notifications\Data [41C61629A3BC0C75]</pattern>
+
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Notifications\Data [418A073AA3BC7C75]</pattern>
+
+          </objectSet>
+        </merge>
+
+        <destinationCleanup>
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Notifications\* [*]</pattern>
+          </objectSet>
+        </destinationCleanup>
+
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\* [*]</pattern>
+          </objectSet>
+        </include>
+
+        <exclude>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation [ActiveTimeBias]</pattern>
+          </objectSet>
+        </exclude>
+
+        <destinationCleanup>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\* [*]</pattern>
+          </objectSet>
+        </destinationCleanup>
+
+        <merge script="MigXmlHelper.SourcePriority()">
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\* [*]</pattern>
+          </objectSet>
+        </merge>
+
+        <destinationCleanup>
+          <objectSet>
+            <!-- NDIS staged upgrade cleanup -->
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Class\{4D36E972-E325-11CE-BFC1-08002bE10318}\$ [NetLuidIndex]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Class\{6BDD1FC5-810F-11D0-BEC7-08002BE2092F}\$ [NetLuidIndex]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Network\{4D36E972-E325-11CE-BFC1-08002bE10318}\{* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Nsi\{eb004a11-9b1a-11d4-9123-0050047759bc}\10\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Nsi\{eb004a11-9b1a-11d4-9123-0050047759bc}\7\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Nsi\{eb004a11-9b1a-11d4-9123-0050047759bc}\6\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\NDIS\IfTypes\$ [IfType]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\NDIS\IfTypes\$ [IfUsedNetLuidIndices]</pattern>
+
+          </objectSet>
+        </destinationCleanup>
+
+      </rules>
+
+      <rules>
+        <detects>
+          <detect>
+            <condition>MigXmlHelper.IsOSEarlierThan("NT","6.0.0.0")</condition>
+          </detect>
+        </detects>
+
+        <include>
+          <objectSet>
+            <!-- Eventlog machine specific settings (owner:MichaelM)-->
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog\* [*]</pattern>
+          </objectSet>
+        </include>
+
+        <exclude>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\EventLog\Application\WinRM\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\EventLog\System\WinRM\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\EventLog\Security\AD FS 2.0 Auditing\*[*]</pattern>
+          </objectSet>
+        </exclude>
+
+        <includeAttributes attributes="Security">
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog\ADAM*</pattern>
+          </objectSet>
+        </includeAttributes>
+
+        <exclude>
+          <objectSet>
+            <!-- Event log path -->
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog\$ [File]</pattern>
+          </objectSet>
+        </exclude>
+
+        <merge script="MigXmlHelper.DestinationPriority()">
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog\* [*]</pattern>
+
+            <!-- Svchost settings -->
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog [*]</pattern>
+          </objectSet>
+        </merge>
+
+        <merge script="MigXmlHelper.SourcePriority()">
+          <objectSet>
+            <!-- Classic event log settings -->
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog\$ [CustomSD]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog\$ [Isolation]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog\$ [Retention]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog\$ [AutoBackupLogFiles]</pattern>
+          </objectSet>
+        </merge>
+
+        <merge script="MigXmlHelper.HigherValue()">
+          <objectSet>
+             <!-- Event log size -->
+             <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog\$ [MaxSize]</pattern>
+          </objectSet>
+        </merge>
+      </rules>
+
+      <rules>
+        <detects>
+          <detect>
+            <condition negation="Yes">MigXmlHelper.IsOSEarlierThan("NT","6.0.0.0")</condition>
+          </detect>
+        </detects>
+
+        <include>
+          <objectSet>
+            <!-- Eventlog machine specific settings (owner:MichaelM)-->
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows\CurrentVersion\winevt\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog\* [*]</pattern>
+          </objectSet>
+        </include>
+
+        <exclude>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\EventLog\Security\AD FS 2.0 Auditing\*[*]</pattern>
+          </objectSet>
+        </exclude>
+
+        <includeAttributes attributes="Security">
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog\ADAM*</pattern>
+          </objectSet>
+        </includeAttributes>
+
+
+        <exclude>
+          <objectSet>
+            <!-- Event log publisher key path -->
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{832d43c6-2e88-4be7-a4d1-61fc2430ff07}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{d6795c62-6f24-4363-99ce-2ff3f4b1faba}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{f863cf1c-c759-4dc0-98bb-81a109974cdf}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{fb5e81f8-9a5c-4c9e-8144-6b9123e078df}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{d2dd58ba-3ed4-4d5a-9987-af473bb6d0b0}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{1be39648-5678-4fae-839b-10da2c4cf234}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{cd75048f-1233-4f58-b9ed-98ba2097ac7e}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{4153360c-6259-4e56-900c-818532b7897d}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{5b33145c-1c66-49f3-b4ca-f563c165f2c0}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{13e8b4f7-4d1c-4f65-95a2-39c6b26a3012}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{986329a0-a1d5-46cf-8801-595d646c271f}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{1fd7c1d2-d037-4620-8d29-b2c7e5fcc13a}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{560b2594-7530-4c77-8998-f067ae1e2918}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{a58d520f-c444-4982-bb61-8db7f0a5f217}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{4d5ae6a1-c7c8-4e6d-b840-4d8080b42e1b}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{eea178e3-e9d4-41ca-bb56-cede1a476629}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{4b3efc0a-e514-4022-bd50-532620d2d9fb}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{67beaf60-484b-4078-a99b-95cf827c553b}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{2129b945-09ed-4965-820e-032243a31578}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{e4c60dfa-ecc5-4889-b406-e9ddd38463c8}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{565bbeca-5b04-49bb-81c6-3e21527fcc8a}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{e98754d0-883b-11db-b606-0800200c9a66}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{95353826-4fbe-41d4-9c42-f521c6e86360}\* [*]</pattern>
+
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{bc2eeeec-b77a-4a52-b6a4-dffb1b1370cb}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{57e0b31d-de8c-4181-bcd1-f70e880b49fc}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{8c9dd1ad-e6e5-4b07-b455-684a9d879900}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{e7ef96be-969f-414f-97d7-3ddb7b558ccc}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{98583af0-fc93-4e71-96d5-9f8da716c6b8}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{92ae46d7-6d9c-4727-9ed5-e49af9c24cbf}\* [*]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{01979c6a-42fa-414c-b8aa-eee2c8202018}\* [*]</pattern>
+
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{3df0c2c1-5a04-4966-9790-df6ef0ccde9c}\* [*]</pattern>
+
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{b43979bf-6596-4d15-944f-cd89b2b935ca}\* [*]</pattern>
+
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{788fda79-b68a-40df-b409-8778a3fa6edd}\* [*]</pattern>
+
+            <!-- Event log channel key path -->
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\winevt\Channels\Microsoft-Windows-DxpTaskRingtone/Analytic\* [*]</pattern>
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows\CurrentVersion\winevt\channels\Microsoft-Windows-MeetingSpace/Operational [*]</pattern>
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows\CurrentVersion\winevt\channels\Microsoft-Windows-Security-Licensing-SLC/Perf [*]</pattern>
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows\CurrentVersion\winevt\channels\Microsoft-Windows-TerminalServices-Gateway/* [*]</pattern>
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows\CurrentVersion\winevt\channels\Microsoft-Windows-Diagnosis-MSDT* [*]</pattern>
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows\CurrentVersion\winevt\channels\Microsoft-Windows-PrintSpooler* [*]</pattern>
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows\CurrentVersion\winevt\channels\Microsoft-Windows-Eventlog-ForwardPlugin/Debug [*]</pattern>
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows\CurrentVersion\winevt\channels\Microsoft-Windows-OfflineFiles* [*]</pattern>
+
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows\CurrentVersion\winevt\Channels\Microsoft-Windows-EDP-Application-Learning/Operational [*]</pattern>
+          </objectSet>
+        </exclude>
+
+        <merge script="MigXmlHelper.DestinationPriority()">
+          <objectSet>
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows\CurrentVersion\winevt\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog\* [*]</pattern>
+
+            <!-- Svchost settings -->
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog [*]</pattern>
+
+            <!-- Event log files and paths -->
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows\CurrentVersion\winevt\channels\$ [File]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog\$ [File]</pattern>
+
+            <!-- Eventlog global settings -->
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows\CurrentVersion\winevt [*]</pattern>
+
+            <!-- Event log settings -->
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows\CurrentVersion\winevt\channels\$ [*]</pattern>
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows\CurrentVersion\winevt\filters\* [*]</pattern>
+          </objectSet>
+        </merge>
+
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\AutoLogger-Diagtrack-Listener\* [*]</pattern>
+          </objectSet>
+        </include>
+
+        <merge script="MigXmlHelper.DestinationPriority()">
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\AutoLogger-Diagtrack-Listener\* [*]</pattern>
+          </objectSet>
+        </merge>
+      </rules>
+
+      <rules context="System">
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\partmgr\Parameters [SanPolicy]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\mountmgr [NoAutoMount]</pattern>
+          </objectSet>
+        </include>
+      </rules>
+
+      <rules context="System">
+        <conditions>
+          <condition negation="Yes">MigXmlHelper.DoesObjectExist("Registry", "HKLM\SYSTEM\CurrentControlSet\Services\partmgr\Parameters [SanPolicy]")</condition>
+        </conditions>
+        <contentModify script="MigXmlHelper.SetValueByTable('0,1', '1,2', '1')">
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\mountmgr [NoAutoMount]</pattern>
+          </objectSet>
+        </contentModify>
+        <locationModify script="MigXmlHelper.ExactMove('HKLM\SYSTEM\CurrentControlSet\Services\partmgr\Parameters [SanPolicy]')">
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\mountmgr [NoAutoMount]</pattern>
+          </objectSet>
+        </locationModify>
+      </rules>
+
+
+
+      <rules context="System">
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows NT\CurrentVersion\Print\PrinterMigration\* [*]</pattern>
+          </objectSet>
+        </include>
+      </rules>
+
+      <rules context="System">
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Control\Print\Monitors\3D Port\* [*]</pattern>
+          </objectSet>
+        </include>
+      </rules>
+
+      <rules context="System">
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows NT\CurrentVersion\Print\Printers\* [*]</pattern>
+          </objectSet>
+        </include>
+        <locationModify script="MigXmlHelper.RelativeMove('HKLM\Software\Microsoft\Windows NT\CurrentVersion\Print\Printers','HKLM\Software\Microsoft\Windows NT\CurrentVersion\Print\PrinterMigrationEx')">
+          <objectSet>
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows NT\CurrentVersion\Print\Printers\*[*]</pattern>
+          </objectSet>
+        </locationModify>
+      </rules>
+
+      <rules context="System">
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\Setup\Upgrade\* [*]</pattern>
+          </objectSet>
+        </include>
+      </rules>
+
+    </role>
+  </component>
+
+  <component type="System" context="System">
+    <displayName>DCRoleOfflineUpgrade</displayName>
+    <paths>
+      <path type="File">%WINDIR%\DCRoleOfflineUpgrade</path>
+    </paths>
+
+    <role role="Settings">
+      <detects>
+        <detect context="System">
+          <condition>MigXmlHelper.DoesStringContentEqual("Registry", "HKLM\SYSTEM\CurrentControlSet\control\ProductOptions [ProductType]", "LanManNT")</condition>
+        </detect>
+      </detects>
+
+      <environment context="System">
+        <variable name="DSA_WORKING_DIR">
+          <script>MigXmlHelper.GetStringContent("Registry","HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [DSA Working Directory]")</script>
+        </variable>
+        <variable name="DATABASE_LOG_FILES_PATH">
+          <script>MigXmlHelper.GetStringContent("Registry","HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [Database log files path]")</script>
+        </variable>
+      </environment>
+
+      <rules context="System">
+        <addObjects>
+          <object>
+            <location type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\NTDS [DirectoryServiceExtPt]</location>
+            <attributes>ExpandString</attributes>
+            <bytes string="YES" expand="NO">%SystemRoot%\system32\ntdsa.dll</bytes>
+          </object>
+          <object>
+            <location type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\NTDS [LsaDbExtPt]</location>
+            <attributes>ExpandString</attributes>
+            <bytes string="YES" expand="NO">%SystemRoot%\system32\lsadb.dll</bytes>
+          </object>
+          <object>
+            <location type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [ServiceDll]</location>
+            <attributes>ExpandString</attributes>
+            <bytes string="YES" expand="NO">%SystemRoot%\system32\ntdsa.dll</bytes>
+          </object>
+        </addObjects>
+
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\NTDS [DirectoryServiceExtPt]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\NTDS [LsaDbExtPt]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [ServiceDll]</pattern>
+          </objectSet>
+        </include>
+      </rules>
+
+      <rules context="System">
+        <addObjects>
+          <object>
+            <location type="Registry">HKLM\System\CurrentControlSet\Services\NTDS [Start]</location>
+            <attributes>Dword</attributes>
+            <bytes>02000000</bytes>
+          </object>
+        </addObjects>
+
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\NTDS\rid\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\NTDS\RID Values\* [*]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\control\ProductOptions [ProductType]</pattern>
+            <pattern type="Registry">HKLM\SYSTEM\CurrentControlSet\Services\NetLogon\Parameters [SysVol]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\NTDS\* [*]</pattern>
+            <pattern type="Registry">HKLM\System\CurrentControlSet\Services\NTDS [Start]</pattern>
+          </objectSet>
+        </include>
+
+      </rules>
+      <rules context="System">
+        <detects>
+          <detect>
+            <condition>MigXmlHelper.DoesStringContentContain("Registry", "HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [DSA Working Directory]","%SystemRoot%")</condition>
+            <condition>MigXmlHelper.DoesStringContentContain("Registry", "HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [DSA Working Directory]","%ProgramFiles%")</condition>
+            <condition>MigXmlHelper.DoesStringContentContain("Registry", "HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [DSA Working Directory]","%SystemDrive%\Program Files")</condition>
+            <condition>MigXmlHelper.DoesStringContentContain("Registry", "HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [DSA Working Directory]","%ProgramFiles(x86)%")</condition>
+            <condition>MigXmlHelper.DoesStringContentContain("Registry", "HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [DSA Working Directory]","%SystemDrive%\build")</condition>
+            <condition>MigXmlHelper.DoesStringContentContain("Registry", "HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [DSA Working Directory]","%SystemDrive%\InstalledRepository")</condition>
+            <condition>MigXmlHelper.DoesStringContentContain("Registry", "HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [DSA Working Directory]","%ProfilesFolder%")</condition>
+            <condition>MigXmlHelper.DoesStringContentContain("Registry", "HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [DSA Working Directory]","%ProgramData%")</condition>
+            <condition>MigXmlHelper.DoesStringContentContain("Registry", "HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [DSA Working Directory]","%SystemDrive%\Documents and Settings")</condition>
+          </detect>
+        </detects>
+        <include>
+          <objectSet>
+            <pattern type="File">%DSA_WORKING_DIR%\* [*]</pattern>
+          </objectSet>
+        </include>
+      </rules>
+
+      <rules context="System">
+        <detects>
+          <detect>
+            <condition>MigXmlHelper.DoesStringContentContain("Registry", "HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [Database log files path]","%SystemRoot%")</condition>
+            <condition>MigXmlHelper.DoesStringContentContain("Registry", "HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [Database log files path]","%ProgramFiles%")</condition>
+            <condition>MigXmlHelper.DoesStringContentContain("Registry", "HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [Database log files path]","%SystemDrive%\Program Files")</condition>
+            <condition>MigXmlHelper.DoesStringContentContain("Registry", "HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [Database log files path]","%ProgramFiles(x86)%")</condition>
+            <condition>MigXmlHelper.DoesStringContentContain("Registry", "HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [Database log files path]","%SystemDrive%\build")</condition>
+            <condition>MigXmlHelper.DoesStringContentContain("Registry", "HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [Database log files path]","%SystemDrive%\InstalledRepository")</condition>
+            <condition>MigXmlHelper.DoesStringContentContain("Registry", "HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [Database log files path]","%ProfilesFolder%")</condition>
+            <condition>MigXmlHelper.DoesStringContentContain("Registry", "HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [Database log files path]","%ProgramData%")</condition>
+            <condition>MigXmlHelper.DoesStringContentContain("Registry", "HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters [Database log files path]","%SystemDrive%\Documents and Settings")</condition>
+          </detect>
+        </detects>
+        <include>
+          <objectSet>
+            <pattern type="File">%DATABASE_LOG_FILES_PATH%\* [*]</pattern>
+          </objectSet>
+        </include>
+      </rules>
+
+    </role>
+  </component>
+
+  <component type="System" context="System">
+
+    <displayName>DiagTrack</displayName>
+
+    <role role="Settings">
+
+      <rules context="System">
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack [DiagTrackDbVersion]</pattern>
+            <pattern type="File">%ProgramData%\Microsoft\Diagnosis [*.rbs]</pattern>
+          </objectSet>
+        </include>
+        <merge script="MigXmlHelper.SourcePriority()">
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack [DiagTrackDbVersion]</pattern>
+            <pattern type="File">%ProgramData%\Microsoft\Diagnosis [*.rbs]</pattern>
+          </objectSet>
+        </merge>
+      </rules>
+
+    </role>
+  </component>
+
+  <component type="System" context="System">
+
+    <displayName>Microsoft-Windows-AppX-Deployment-Server</displayName>
+
+    <role role="Settings">
+
+      <rules context="system">
+        <!-- Copy old state repository machine database to downlevel for package policy preservation across os upgrade only if the OS is pre-RS1 RTM (build 14393). Note that IsOSEarlierThan actually behaves as IsOSEarlierThanOrEqualTo, so we use 14392-->
+        <conditions>
+          <condition>MigXmlHelper.IsOSEarlierThan("NT", "10.0.14392")</condition>
+        </conditions>
+        <include>
+          <objectSet>
+            <pattern type="File">%ProgramData%\Microsoft\Windows\AppRepository [StateRepository-Machine*]</pattern>
+          </objectSet>
+        </include>
+        <locationModify script="MigXmlHelper.RelativeMove(&apos;%ProgramData%\Microsoft\Windows\AppRepository&apos;,&apos;%ProgramData%\Microsoft\Windows\AppRepository\Downlevel&apos;)">
+          <objectSet>
+            <pattern type="File">%ProgramData%\Microsoft\Windows\AppRepository [StateRepository-Machine*]</pattern>
+          </objectSet>
+        </locationModify>
+      </rules>
+
+      <rules context="system">
+      <!-- migrate old state repository machine database for no-register across os upgrade only if the OS is NOT pre-RS1 RTM (build 14393). Note that IsOSEarlierThan actually behaves as IsOSEarlierThanOrEqualTo, so we use 14392-->
+        <conditions>
+          <condition negation="Yes">MigXmlHelper.IsOSEarlierThan("NT", "10.0.14392")</condition>
+        </conditions>
+        <include>
+          <objectSet>
+            <pattern type="File">%ProgramData%\Microsoft\Windows\AppRepository [StateRepository-*]</pattern>
+            <pattern type="File">%ProgramData%\Microsoft\Windows\AppRepository\Packages\*[*]</pattern>
+            <pattern type="File">%ProgramData%\Microsoft\Windows\AppRepository\Families\*[*]</pattern>
+          </objectSet>
+        </include>
+        <merge script="MigXmlHelper.DestinationPriority()">
+          <objectSet>
+            <pattern type="File">%ProgramData%\Microsoft\Windows\AppRepository\Packages\*[*]</pattern>
+            <pattern type="File">%ProgramData%\Microsoft\Windows\AppRepository\Families\*[*]</pattern>
+          </objectSet>
+        </merge>
+        <merge script="MigXmlHelper.SourcePriority()">
+          <objectSet>
+            <pattern type="File">%ProgramData%\Microsoft\Windows\AppRepository [StateRepository-*]</pattern>
+          </objectSet>
+        </merge>
+      </rules>
+
+    </role>
+  </component>
+
+  <component type="System" context="System">
+
+    <displayName>Microsoft-OneCore-Bluetooth-Gatt</displayName>
+
+    <role role="Settings">
+
+      <rules context="system">
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows\CurrentVersion\Bluetooth\* [*]</pattern>
+          </objectSet>
+        </include>
+        <excludeAttributes attributes="Security">
+          <objectSet>
+            <pattern type="Registry">HKLM\Software\Microsoft\Windows\CurrentVersion\Bluetooth\*</pattern>
+          </objectSet>
+        </excludeAttributes>
+      </rules>
+
+    </role>
+  </component>
+
+</migration>

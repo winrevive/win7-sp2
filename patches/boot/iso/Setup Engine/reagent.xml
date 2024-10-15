@@ -1,0 +1,17 @@
+﻿<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<WindowsRE version="2.0">
+	<WinreBCD id=""></WinreBCD>
+	<WinreLocation path="" id="0" offset="0"></WinreLocation>
+	<ImageLocation path="" id="0" offset="0"></ImageLocation>
+	<PBRImageLocation path="" id="0" offset="0" index="0"></PBRImageLocation>
+	<PBRCustomImageLocation path="" id="0" offset="0" index="0"></PBRCustomImageLocation>
+	<InstallState state="0"></InstallState>
+	<OsInstallAvailable state="0"></OsInstallAvailable>
+	<CustomImageAvailable state="0"></CustomImageAvailable>
+	<WinREStaged state="0"></WinREStaged>
+	<ScheduledOperation state="4"></ScheduledOperation>
+	<OperationParam path=""></OperationParam>
+	<OperationPermanent state="0"></OperationPermanent>
+	<OsBuildVersion path=""></OsBuildVersion>
+	<OemTool state="0"></OemTool>
+</WindowsRE>

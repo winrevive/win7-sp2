@@ -1,0 +1,3 @@
+HwCompat V4
+
+NOTE: This file is no longer used.
