@@ -8,18 +8,19 @@ Windows 7 Service Pack 2 is a package consisting of updates, tweaks, backported 
 ## TODOs
 
 - [x] - All updates until 2020, with the addition of Windows Embedded Standard 7 updates
-- [x] - Snipping Tool from Windows 10 version 1507
+- [x] - Snipping Tool from Windows 10 version 1507 -> Credits: vxiduu
 - [ ] - Paint from Windows 10 version 1703
-- [x] - Registry Editor from Windows 10 version 1703
+- [x] - Registry Editor from Windows 10 version 1703 -> Credits: Aurorarion
 - [ ] - In-place service pack installer
-- [x] - Generic USB 3.0 and NVMe drivers
-- [x] - UEFI support in the ISO releases (if you download the UEFI-specific version)
-- [x] - Inclusion of VxKex
-- [x] - Windows 8 PE in the ISO, with a theme that resembles Windows 7
-- [x] - Windows 10 setup engine in the ISO release
+- [x] - Native USB 3.0 and NVMe support -> Credits: Unknown user from MyDigitalLife forums
+- [x] - UEFI support in the ISO releases -> Credits: UsefulAGKHelper from MyDigitalLife forums
+- [x] - Inclusion of VxKex -> Credits: vxiduu
+- [x] - Windows 8 PE in the ISO, with a theme that resembles Windows 7 -> Credits: ImSwordQueen (Windows 7 theme for Windows 8.x)
+- [x] - Windows 10 setup engine in the ISO release -> Credits: Aurorarion (helping out on the 10 setup engine port)
 - [ ] - Upscaled graphics in some places
 - [x] - Windows Vista/7 PE's boot screen on the ISO
-- [ ] - Removal of the annoying "Unsupported hardware" prompt
+- [ ] - Removal of the annoying "Unsupported hardware" prompt 
+- [ ] - Better DPI support in aero.msstyles -> Credits: Vaporvance (high DPI classes from Aero10 that will be ported to Windows 7)
 
 ## Installation
 
@@ -73,19 +74,9 @@ A: **NO**
 
 A: Well to answer your question, how would we add RAID if it's not even supported by intel/other manufacturers?
 
-## Credits
+## Other credits
 
-### Developers
-
-- Alureon
-- h4rl
-- vm3dmp (Average PC)
-
-### Honorable mentions
-
-- Microsoft Corporation: Windows 7 operating system. *Windows 7 Service Pack 2 is by no means affiliated with Microsoft Corporation.*
-- K4sum1: Inspiration (this project is inspired from the Windows 7 Updated ISO by K4sum1)
-- vxiduu: VxKex and SnippingToolEx
-- Aurorarion: Some app backports and themed controls in the ISO's autorun
-- ImSwordQueen: Windows 7 theme used in the installation media's PE
-- Private Testers
+- K4sum1: Inspiration for creating Windows 7 SP2
+- GMM2003: "Under construction" wallpaper used in Public Beta builds
+- Our contributors
+- Anyone who reports bugs constantly
