@@ -10,17 +10,18 @@ Windows 7 Service Pack 2 is a package consisting of updates, tweaks, backported 
 - [x] - All updates until 2020, with the addition of Windows Embedded Standard 7 updates
 - [x] - Snipping Tool from Windows 10 version 1507 -> Credits: vxiduu
 - [ ] - Paint from Windows 10 version 1703
-- [x] - Registry Editor from Windows 10 version 1703 -> Credits: Aurorarion
+- [x] - Registry Editor from Windows 10 version 1703 -> Credits: [Aurorarion](https://github.com/AurorarionWin/)
 - [ ] - In-place service pack installer
 - [x] - Native USB 3.0 and NVMe support -> Credits: Unknown user from MyDigitalLife forums
-- [ ] - UEFI support in the ISO releases
+- [ ] - UEFI support in the ISO releases, with EFI GOP support too
 - [x] - Inclusion of VxKex -> Credits: vxiduu
-- [x] - Windows 8 PE in the ISO, with a theme that resembles Windows 7 -> Credits: ImSwordQueen (Windows 7 theme for Windows 8.x)
-- [x] - Windows 10 setup engine in the ISO release -> Credits: Aurorarion (helping out on the 10 setup engine port)
+- [x] - Windows 8 PE in the ISO, with a theme that resembles Windows 7 -> Credits: [ImSwordQueen](https://github.com/ImSwordQueen/) (Windows 7 theme for Windows 8.x)
+- [x] - Windows 10 setup engine in the ISO release -> Credits: [Aurorarion](https://github.com/AurorarionWin/) (helping out on the 10 setup engine port)
 - [ ] - Upscaled graphics in some places
-- [x] - Windows Vista/7 PE's boot screen on the ISO
+- [x] - Windows Vista/7 PE's boot screen on the ISO -> Credits: Microsoft Corporation and [Tech Stuff](https://github.com/teknixstuff) (Boot8Plus)
 - [ ] - Removal of the annoying "Unsupported hardware" prompt 
-- [ ] - Better DPI support in aero.msstyles -> Credits: Vaporvance (high DPI classes from Aero10 that will be ported to Windows 7)
+- [ ] - Better DPI support in aero.msstyles -> Credits: [Vaporvance](https://www.deviantart.com/vaporvance) (high DPI classes from Aero10 that will be ported to Windows 7)
+- [ ] - Integration of Microsoft Visual C++ Redistributable AIO -> Credits: Microsoft Corporation (Visual C++) and [abbodi1406](https://github.com/abbodi1406/) (VC++ AIO repack)
 
 ## Installation
 
