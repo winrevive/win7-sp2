@@ -13,6 +13,7 @@ Windows 7 Service Pack 2 is a package consisting of updates, tweaks, backported 
 - [x] - Registry Editor from Windows 10 version 1703 -> Credits: [Aurorarion](https://github.com/AurorarionWin/)
 - [ ] - In-place service pack installer
 - [x] - Native USB 3.0 and NVMe support -> Credits: Unknown user from MyDigitalLife forums
+- [x] - TPM 2.0 support
 - [ ] - UEFI support in the ISO releases, with EFI GOP support too
 - [x] - Inclusion of VxKex -> Credits: vxiduu
 - [x] - Windows 8 PE in the ISO, with a theme that resembles Windows 7 -> Credits: [ImSwordQueen](https://github.com/ImSwordQueen/) (Windows 7 theme for Windows 8.x)
