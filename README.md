@@ -14,7 +14,7 @@ Windows 7 Service Pack 2 is a package consisting of updates, tweaks, backported 
 - [ ] - In-place service pack installer
 - [x] - Native USB 3.0 and NVMe support -> Credits: Unknown user from MyDigitalLife forums
 - [x] - TPM 2.0 support
-- [ ] - UEFI support in the ISO releases, with EFI GOP support too
+- [X] - UEFI support in the ISO releases, with EFI GOP support too -> Credits: Typical/int10h, [AveragePC](https://github.com/FaultyFaulty-glitch/)
 - [x] - Inclusion of VxKex -> Credits: vxiduu
 - [x] - Windows 8 PE in the ISO, with a theme that resembles Windows 7 -> Credits: [ImSwordQueen](https://github.com/ImSwordQueen/) (Windows 7 theme for Windows 8.x)
 - [x] - Windows 10 setup engine in the ISO release -> Credits: [Aurorarion](https://github.com/AurorarionWin/) (helping out on the 10 setup engine port)
@@ -31,7 +31,7 @@ Windows 7 Service Pack 2 is a package consisting of updates, tweaks, backported 
 > Failure to follow instructions properly will result in a bricked system! We do not take responsibility for this unless this is a legitimate bug in the installer!
 
 > [!IMPORTANT]
-> RAID Storage is not supported. Only NVMe is added. Read below in the FAQ for why we did not add RAID.
+> RAID/Intel RST only works on specific systems!
 
 > [!WARNING]
 > Both versions of the Windows 7 Service Pack 2 are x64 only! Don't file issues over the lack of 32-bit hardware support as we do not plan to support 32-bit hardware. Consult the FAQ for more information.
@@ -73,9 +73,9 @@ A: VxKex is safer than dotexe's Windows 7 Extended Kernel as it relies on extern
 
 A: **NO**
 
-### Q: Does it come with RAID storag-
+### Q: Why aren't my drives appearing in the Windows Setup screen?
 
-A: Well to answer your question, how would we add RAID if it's not even supported by intel/other manufacturers?
+A: If you are using an RAID/RST configuration, it may well likely be that the drivers installed do not work.
 
 ## Other credits
 
