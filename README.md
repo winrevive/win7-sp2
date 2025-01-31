@@ -9,8 +9,8 @@ Windows 7 Service Pack 2 is a package consisting of updates, tweaks, backported 
 
 - [x] - All updates until 2020, with the addition of Windows Embedded Standard 7 updates
 - [x] - Snipping Tool from Windows 10 version 1507 -> Credits: vxiduu
-- [ ] - Paint from Windows 10 version 1703
-- [x] - Registry Editor from Windows 10 version 1703 -> Credits: [Aurorarion](https://github.com/AurorarionWin/)
+- [X] - Paint from Windows 8 build 9425
+- [x] - Registry Editor from Windows 10 build 16212 -> Credits: [Aurorarion](https://github.com/AurorarionWin/)
 - [ ] - In-place service pack installer
 - [x] - Native USB 3.0 and NVMe support -> Credits: Unknown user from MyDigitalLife forums
 - [x] - TPM 2.0 support
@@ -19,12 +19,26 @@ Windows 7 Service Pack 2 is a package consisting of updates, tweaks, backported 
 - [x] - Windows 8 PE in the ISO, with a theme that resembles Windows 7 -> Credits: [ImSwordQueen](https://github.com/ImSwordQueen/) (Windows 7 theme for Windows 8.x)
 - [x] - Windows 10 setup engine in the ISO release -> Credits: [Aurorarion](https://github.com/AurorarionWin/) (helping out on the 10 setup engine port)
 - [x] - Builtin Webp and FLAC codecs
-- [x] - Task Manager from Windows 8 build 7793 -> Credits: [Jevil7452](https://github.com/Jevil7452)
+- [x] - Task Manager from Windows 8 build 7880 -> Credits: [Jevil7452](https://github.com/Jevil7452)
 - [ ] - Upscaled graphics in some places
 - [x] - Windows Vista/7 PE's boot screen on the ISO -> Credits: Microsoft Corporation and [Tech Stuff](https://github.com/teknixstuff) (Boot8Plus)
 - [ ] - Removal of the annoying "Unsupported hardware" prompt 
 - [ ] - Better DPI support in aero.msstyles -> Credits: [Vaporvance](https://www.deviantart.com/vaporvance) (high DPI classes from Aero10 that will be ported to Windows 7)
-- [ ] - Integration of Microsoft Visual C++ Redistributable AIO -> Credits: Microsoft Corporation (Visual C++) and [abbodi1406](https://github.com/abbodi1406/) (VC++ AIO repack)
+- [X] - Integration of Microsoft Visual C++ Redistributable AIO -> Credits: Microsoft Corporation (Visual C++) and [abbodi1406](https://github.com/abbodi1406/) (VC++ AIO repack)
+- [X] - Disk Cleanup from Windows 8 build 7861 -> Credits: [Jevil7452](https://github.com/Jevil7452)
+- [X] - Windows 8 build 7861's PDF Reader -> Credits: [Jevil7452](https://github.com/Jevil7452)
+- [X] - Windows 10 20H1's System Information -> Credits: [Jevil7452](https://github.com/Jevil7452)
+- [X] - Windows 11 24H2's timeout.exe command
+- [X] - Windows 10 1709's XPS Viewer
+- [X] - Windows 11 24H2's sudo.exe command
+- [X] - Windows 10 build 9845's Notepad
+- [X] - Windows Management Framework 5.1
+- [X] - Segoe UI Emoji
+- [X] - Microsoft Agent
+- [X] - WinHlp32
+- [X] - Work Folders
+- [X] - Restore Windows Journal
+- [X] - Microsoft Camera Codec Pack
 
 ## Installation
 
