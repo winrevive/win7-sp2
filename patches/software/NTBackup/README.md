@@ -1,3 +1,3 @@
-# Work Folders
+# NTBackup
 
-> This is a port of the Work Folders feature from Windows 8.1. It allows users to consistently access their work files and access them from anywhere.
+> This update installs the legacy Backup utility. It lets users back up files to a tape drive, ZIP drive, floppy drive or a hard drive. It is also needed to read any backups previously taken with it.
