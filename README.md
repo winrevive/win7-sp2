@@ -28,6 +28,7 @@ Windows 7 Service Pack 2 is a package consisting of updates, tweaks, backported 
 - [X] - Disk Cleanup from Windows 8 build 7861 -> Credits: [Jevil7452](https://github.com/Jevil7452)
 - [X] - Windows 8 build 7861's PDF Reader -> Credits: [Jevil7452](https://github.com/Jevil7452)
 - [X] - Windows 10 20H1's System Information -> Credits: [Jevil7452](https://github.com/Jevil7452)
+- [X] - Windows 11 24H2's timeout.exe command
 
 ## Installation
 
