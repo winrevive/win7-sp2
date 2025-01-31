@@ -25,6 +25,7 @@ Windows 7 Service Pack 2 is a package consisting of updates, tweaks, backported 
 - [ ] - Removal of the annoying "Unsupported hardware" prompt 
 - [ ] - Better DPI support in aero.msstyles -> Credits: [Vaporvance](https://www.deviantart.com/vaporvance) (high DPI classes from Aero10 that will be ported to Windows 7)
 - [ ] - Integration of Microsoft Visual C++ Redistributable AIO -> Credits: Microsoft Corporation (Visual C++) and [abbodi1406](https://github.com/abbodi1406/) (VC++ AIO repack)
+- [X] - Disk Cleanup from Windows 8 build 7861 -> Credits: [Jevil7452](https://github.com/Jevil7452)
 
 ## Installation
 
