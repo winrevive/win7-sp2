@@ -1,0 +1,4 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Applets\Paint\Capabilities]
+"CLSID"="{D3E34B21-9D75-101A-8C3D-00AA001A1652}"
