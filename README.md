@@ -31,6 +31,7 @@ Windows 7 Service Pack 2 is a package consisting of updates, tweaks, backported 
 - [X] - Windows 11 24H2's timeout.exe command
 - [X] - Windows 10 1709's XPS Viewer
 - [X] - Windows 11 24H2's sudo.exe command
+- [X] - Windows 10 build 9845's Notepad
 
 ## Installation
 
