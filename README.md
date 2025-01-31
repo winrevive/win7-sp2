@@ -19,6 +19,7 @@ Windows 7 Service Pack 2 is a package consisting of updates, tweaks, backported 
 - [x] - Windows 8 PE in the ISO, with a theme that resembles Windows 7 -> Credits: [ImSwordQueen](https://github.com/ImSwordQueen/) (Windows 7 theme for Windows 8.x)
 - [x] - Windows 10 setup engine in the ISO release -> Credits: [Aurorarion](https://github.com/AurorarionWin/) (helping out on the 10 setup engine port)
 - [x] - Builtin Webp and FLAC codecs
+- [x] - Task Manager from Windows 8 build 7793 -> Credits: [Jevil7452](https://github.com/Jevil7452)
 - [ ] - Upscaled graphics in some places
 - [x] - Windows Vista/7 PE's boot screen on the ISO -> Credits: Microsoft Corporation and [Tech Stuff](https://github.com/teknixstuff) (Boot8Plus)
 - [ ] - Removal of the annoying "Unsupported hardware" prompt 
