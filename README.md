@@ -24,7 +24,7 @@ Windows 7 Service Pack 2 is a package consisting of updates, tweaks, backported 
 - [x] - Windows Vista/7 PE's boot screen on the ISO -> Credits: Microsoft Corporation and [Tech Stuff](https://github.com/teknixstuff) (Boot8Plus)
 - [ ] - Removal of the annoying "Unsupported hardware" prompt 
 - [ ] - Better DPI support in aero.msstyles -> Credits: [Vaporvance](https://www.deviantart.com/vaporvance) (high DPI classes from Aero10 that will be ported to Windows 7)
-- [ ] - Integration of Microsoft Visual C++ Redistributable AIO -> Credits: Microsoft Corporation (Visual C++) and [abbodi1406](https://github.com/abbodi1406/) (VC++ AIO repack)
+- [X] - Integration of Microsoft Visual C++ Redistributable AIO -> Credits: Microsoft Corporation (Visual C++) and [abbodi1406](https://github.com/abbodi1406/) (VC++ AIO repack)
 - [X] - Disk Cleanup from Windows 8 build 7861 -> Credits: [Jevil7452](https://github.com/Jevil7452)
 - [X] - Windows 8 build 7861's PDF Reader -> Credits: [Jevil7452](https://github.com/Jevil7452)
 - [X] - Windows 10 20H1's System Information -> Credits: [Jevil7452](https://github.com/Jevil7452)
@@ -32,6 +32,13 @@ Windows 7 Service Pack 2 is a package consisting of updates, tweaks, backported 
 - [X] - Windows 10 1709's XPS Viewer
 - [X] - Windows 11 24H2's sudo.exe command
 - [X] - Windows 10 build 9845's Notepad
+- [X] - Windows Management Framework 5.1
+- [X] - Segoe UI Emoji
+- [X] - Microsoft Agent
+- [X] - WinHlp32
+- [X] - Work Folders
+- [X] - Restore Windows Journal
+- [X] - Microsoft Camera Codec Pack
 
 ## Installation
 
